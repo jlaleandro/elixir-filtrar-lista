@@ -12,12 +12,12 @@ defmodule Desafio do
         end
       end)
 
-    length(result, 0)
+    qtdimpar(result, 0)
   end
 
-  defp length([], impar), do: impar
+  defp qtdimpar([], impar), do: impar
 
-  defp length([head | tail], impar) do
+  defp qtdimpar([head | tail], impar) do
     IO.inspect(head)
 
     if head != 0 do
@@ -28,6 +28,6 @@ defmodule Desafio do
       impar
     end
 
-    length(tail, impar)
+    qtdimpar(tail, impar)
   end
 end
